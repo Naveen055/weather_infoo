@@ -184,11 +184,6 @@ The application uses the following tables:
 
 ---
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
----
-
 ## Acknowledgments
 - OpenWeather for providing the Geocoding and Weather APIs.
 - Spring Boot for the backend framework.
