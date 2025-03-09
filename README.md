@@ -92,15 +92,11 @@ Update the database connection details in src/main/resources/application.propert
 
   ## API Endpoints
   **Get Weather Information**
-   URL: /weather
-   
-   Method: GET
-   
-   Parameters:
-   
-   pincode: The pincode for which weather information is required (e.g., 411014).
-   
-   forDate: The date for which weather information is required (e.g., 2023-10-15).
+  - URL: /weather   
+  - Method: GET
+  - Parameters:
+      - pincode: The pincode for which weather information is required (e.g., 411014).
+      - forDate: The date for which weather information is required (e.g., 2023-10-15).
    
    Example Request
 
