@@ -78,7 +78,7 @@ Update the database connection details in src/main/resources/application.propert
 
 ---
    
-**Running the Application**
+## Running the Application
 
    1.**Run the Application**:
    ```bash
@@ -88,18 +88,20 @@ Update the database connection details in src/main/resources/application.propert
    
    The application will start on http://localhost:8080.
 
-   **API Endpoints**
-Get Weather Information
-URL: /weather
+---
 
-Method: GET
-
-Parameters:
-
-pincode: The pincode for which weather information is required (e.g., 411014).
-
-forDate: The date for which weather information is required (e.g., 2023-10-15).
-
-Example Request
+  ## API Endpoints
+  **Get Weather Information**
+   URL: /weather
+   
+   Method: GET
+   
+   Parameters:
+   
+   pincode: The pincode for which weather information is required (e.g., 411014).
+   
+   forDate: The date for which weather information is required (e.g., 2023-10-15).
+   
+   Example Request
 
 
