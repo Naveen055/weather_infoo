@@ -68,6 +68,7 @@ Update the database connection details in src/main/resources/application.propert
 3. **Add Your OpenWeather API Key**:
    - Open `src/main/java/com/example/weatherinfo/service/WeatherService.java`.
    - Replace `your_openweather_api_key` with your actual OpenWeather API key:
+     
      ```java
      private static final String API_KEY = "your_openweather_api_key";
      ```
