@@ -168,5 +168,37 @@ The application uses the following tables:
 | date         | DATE        | Date for which weather data is fetched |
 | weather_data | TEXT        | Weather data in JSON format     |
 
+## Testing the API
+1.**Using Postman**:
+   - Import the Postman collection (if available) or manually create a request.
+   - Test the `/weather` endpoint with different pincodes and dates.
+
+2.**Using cURL**:
+```bash
+   curl "http://localhost:8080/weather?pincode=411014&forDate=2023-10-15"
+```
+
+---
+
+### License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
+
+### Acknowledgments
+- OpenWeather for providing the Geocoding and Weather APIs.
+
+- Spring Boot for the backend framework.
+
+- PostgreSQL for the database.
+
+ ### contact
+For any questions or feedback, feel free to reach out:
+
+- Name: Naveen
+
+- Email: spnaveenkumar623@gmail.com
+
+- GitHub: Naveen055
 
 
