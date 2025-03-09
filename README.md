@@ -83,6 +83,21 @@ spring.datasource.password=yourpassword
    mvn spring-boot:run
    ```
    2.**Access the Application**:
+   
    The application will start on http://localhost:8080.
+
+   **API Endpoints**
+Get Weather Information
+URL: /weather
+
+Method: GET
+
+Parameters:
+
+pincode: The pincode for which weather information is required (e.g., 411014).
+
+forDate: The date for which weather information is required (e.g., 2023-10-15).
+
+Example Request
 
 
