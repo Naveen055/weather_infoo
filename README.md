@@ -97,7 +97,57 @@ Update the database connection details in src/main/resources/application.propert
   - Parameters:
       - pincode: The pincode for which weather information is required (e.g., 411014).
       - forDate: The date for which weather information is required (e.g., 2023-10-15).
-   
-   Example Request
+
+  **Example Request**
+  ```bash
+   GET http://localhost:8080/weather?pincode=411014&forDate=2023-10-15
+  ```
+  **Example Response**
+  ```bash
+   {
+  "coord": {
+    "lon": 73.8553,
+    "lat": 18.5196
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 303.15,
+    "feels_like": 304.21,
+    "temp_min": 303.15,
+    "temp_max": 303.15,
+    "pressure": 1013,
+    "humidity": 54
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 2.57,
+    "deg": 360
+  },
+  "clouds": {
+    "all": 0
+  },
+  "dt": 1697377200,
+  "sys": {
+    "type": 1,
+    "id": 9052,
+    "country": "IN",
+    "sunrise": 1697331234,
+    "sunset": 1697373456
+  },
+  "timezone": 19800,
+  "id": 1259229,
+  "name": "Pune",
+  "cod": 200
+}
+```
+
 
 
