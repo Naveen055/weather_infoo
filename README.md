@@ -78,9 +78,9 @@ spring.datasource.password=yourpassword
 **Run the Application**:
 Running the Application
 
-bash
-Copy
+```bash
 mvn spring-boot:run
 
 Access the Application:
+```bash
 The application will start on http://localhost:8080.
