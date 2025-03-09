@@ -77,8 +77,12 @@ spring.datasource.password=yourpassword
    mvn clean install
    
 **Running the Application**
-**Run the Application**:
+
+   1.**Run the Application**:
    ```bash
    mvn spring-boot:run
+   ```
+   2.**Access the Application**:
+   The application will start on http://localhost:8080.
 
 
