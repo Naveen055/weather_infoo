@@ -76,7 +76,7 @@ Before running the application, ensure you have the following installed:
 4. **Build the Project**:
    ```bash
       mvn clean install
-   ---
+   ```
    
 ## Running the Application
 
