@@ -168,11 +168,11 @@ The application uses the following tables:
 | weather_data | TEXT        | Weather data in JSON format     |
 
 ## Testing the API
-1.**Using Postman**:
+1. **Using Postman**:
    - Import the Postman collection (if available) or manually create a request.
    - Test the `/weather` endpoint with different pincodes and dates.
 
-2.**Using cURL**:
+2. **Using cURL**:
 ```bash
    curl "http://localhost:8080/weather?pincode=411014&forDate=2023-10-15"
 ```
