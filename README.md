@@ -149,6 +149,24 @@ Update the database connection details in src/main/resources/application.propert
   "cod": 200
 }
 ```
+## Database Schema
+
+The application uses the following tables:
+
+### `pincode_details`
+| Column     | Type        | Description           |
+|------------|-------------|-----------------------|
+| pincode    | VARCHAR     | Primary key (pincode) |
+| latitude   | DOUBLE      | Latitude of the pincode |
+| longitude  | DOUBLE      | Longitude of the pincode |
+
+### `weather_info`
+| Column       | Type        | Description                     |
+|--------------|-------------|---------------------------------|
+| id           | BIGINT      | Primary key (auto-generated)    |
+| pincode      | VARCHAR     | Foreign key (references pincode_details.pincode) |
+| date         | DATE        | Date for which weather data is fetched |
+| weather_data | TEXT        | Weather data in JSON format     |
 
 
 
