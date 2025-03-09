@@ -60,6 +60,7 @@ Before running the application, ensure you have the following installed:
 Create a PostgreSQL database named weatherdb.
 Update the database connection details in src/main/resources/application.properties:
 
+``bash
 spring.datasource.url=jdbc:postgresql://localhost:5432/weatherdb
 spring.datasource.username=postgres
 spring.datasource.password=yourpassword
@@ -74,12 +75,9 @@ spring.datasource.password=yourpassword
    ```bash
    mvn clean install
    
-
+**Running the Application**
 **Run the Application**:
-Running the Application
+   ```bash
+   mvn spring-boot:run
 
-```bash
-mvn spring-boot:run
 
-**Access the Application**:
-The application will start on http://localhost:8080.
