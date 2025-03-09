@@ -81,6 +81,5 @@ Running the Application
 ```bash
 mvn spring-boot:run
 
-Access the Application:
-```bash
+**Access the Application**:
 The application will start on http://localhost:8080.
