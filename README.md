@@ -60,10 +60,11 @@ Before running the application, ensure you have the following installed:
 Create a PostgreSQL database named weatherdb.
 Update the database connection details in src/main/resources/application.properties:
 
-``bash
+```bash
 spring.datasource.url=jdbc:postgresql://localhost:5432/weatherdb
 spring.datasource.username=postgres
 spring.datasource.password=yourpassword
+```
 3. **Add Your OpenWeather API Key**:
    - Open `src/main/java/com/example/weatherinfo/service/WeatherService.java`.
    - Replace `your_openweather_api_key` with your actual OpenWeather API key:
