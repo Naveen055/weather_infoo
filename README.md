@@ -54,57 +54,60 @@ Before running the application, ensure you have the following installed:
    ```bash
    git clone https://github.com/your-username/weather-info-api.git
    cd weather-info-api
+   ```
 
 2. **Set Up the Database:**
-
    - Create a PostgreSQL database named `weatherdb`.
-   - Update the database connection details in src/main/resources/application.properties:
-
-      ```bash
+   - Update the database connection details in `src/main/resources/application.properties`:
+      ```properties
       spring.datasource.url=jdbc:postgresql://localhost:5432/weatherdb
       spring.datasource.username=postgres
       spring.datasource.password=yourpassword
       ```
+
 3. **Add Your OpenWeather API Key**:
    - Open `src/main/java/com/example/weatherinfo/service/WeatherService.java`.
    - Replace `your_openweather_api_key` with your actual OpenWeather API key:
-     
-        ```java
-        private static final String API_KEY = "your_openweather_api_key";
-        ```
+     ```java
+     private static final String API_KEY = "your_openweather_api_key";
+     ```
 
 4. **Build the Project**:
    ```bash
-      mvn clean install
+   mvn clean install
    ```
-   
+
+---
+
 ## Running the Application
 
-   1.**Run the Application**:
+1. **Run the Application**:
    ```bash
    mvn spring-boot:run
    ```
-   2.**Access the Application**:
-   
+
+2. **Access the Application**:
    - The application will start on `http://localhost:8080`.
 
 ---
 
-  ## API Endpoints
-  **Get Weather Information**
-  - URL: `/weather`   
-  - Method: `GET`
-  - Parameters:
-      - `pincode`: The pincode for which weather information is required (e.g., `411014`).
-      - `forDate`: The date for which weather information is required (e.g., `2023-10-15`).
+## API Endpoints
 
-  **Example Request**
-  ```bash
-   GET http://localhost:8080/weather?pincode=411014&forDate=2023-10-15
-  ```
-  **Example Response**
-  ```bash
-   {
+### Get Weather Information
+- **URL**: `/weather`   
+- **Method**: `GET`
+- **Parameters**:
+  - `pincode`: The pincode for which weather information is required (e.g., `411014`).
+  - `forDate`: The date for which weather information is required (e.g., `2023-10-15`).
+
+### Example Request
+```bash
+GET http://localhost:8080/weather?pincode=411014&forDate=2023-10-15
+```
+
+### Example Response
+```json
+{
   "coord": {
     "lon": 73.8553,
     "lat": 18.5196
@@ -117,7 +120,6 @@ Before running the application, ensure you have the following installed:
       "icon": "01d"
     }
   ],
-  "base": "stations",
   "main": {
     "temp": 303.15,
     "feels_like": 304.21,
@@ -134,10 +136,7 @@ Before running the application, ensure you have the following installed:
   "clouds": {
     "all": 0
   },
-  "dt": 1697377200,
   "sys": {
-    "type": 1,
-    "id": 9052,
     "country": "IN",
     "sunrise": 1697331234,
     "sunset": 1697373456
@@ -148,34 +147,40 @@ Before running the application, ensure you have the following installed:
   "cod": 200
 }
 ```
+
+---
+
 ## Database Schema
 
 The application uses the following tables:
 
 ### `pincode_details`
-| Column     | Type        | Description           |
-|------------|-------------|-----------------------|
-| pincode    | VARCHAR     | Primary key (pincode) |
-| latitude   | DOUBLE      | Latitude of the pincode |
-| longitude  | DOUBLE      | Longitude of the pincode |
+| Column    | Type    | Description               |
+|-----------|--------|---------------------------|
+| pincode   | VARCHAR | Primary key (pincode)    |
+| latitude  | DOUBLE  | Latitude of the pincode  |
+| longitude | DOUBLE  | Longitude of the pincode |
 
 ### `weather_info`
-| Column       | Type        | Description                     |
-|--------------|-------------|---------------------------------|
-| id           | BIGINT      | Primary key (auto-generated)    |
-| pincode      | VARCHAR     | Foreign key (references pincode_details.pincode) |
-| date         | DATE        | Date for which weather data is fetched |
-| weather_data | TEXT        | Weather data in JSON format     |
+| Column      | Type     | Description                                      |
+|------------|---------|--------------------------------------------------|
+| id         | BIGINT   | Primary key (auto-generated)                    |
+| pincode    | VARCHAR  | Foreign key (references pincode_details.pincode) |
+| date       | DATE     | Date for which weather data is fetched           |
+| weather_data | TEXT  | Weather data in JSON format                       |
+
+---
 
 ## Testing the API
+
 1. **Using Postman**:
    - Import the Postman collection (if available) or manually create a request.
    - Test the `/weather` endpoint with different pincodes and dates.
 
 2. **Using cURL**:
-```bash
+   ```bash
    curl "http://localhost:8080/weather?pincode=411014&forDate=2023-10-15"
-```
+   ```
 
 ---
 
@@ -186,20 +191,14 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Acknowledgments
 - OpenWeather for providing the Geocoding and Weather APIs.
-
 - Spring Boot for the backend framework.
-
 - PostgreSQL for the database.
 
 ---
 
- ## contact
+## Contact
 For any questions or feedback, feel free to reach out:
 
-- Name: Naveen
-
-- Email: spnaveenkumar623@gmail.com
-
-- GitHub: Naveen055
-
-
+- **Name**: Naveen
+- **Email**: spnaveenkumar623@gmail.com
+- **GitHub**: [Naveen055](https://github.com/Naveen055)
